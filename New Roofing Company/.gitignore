@@ -1,0 +1,25 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Environments & Secrets
+.env
+.env.local
+*.local
+
+# Node.js / Frontend dependencies
+node_modules/
+dist/
+build/
+
+# Python logs and compiled files
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDEs and Text Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
