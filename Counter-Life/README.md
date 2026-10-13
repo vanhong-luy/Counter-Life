@@ -1,0 +1,1 @@
+Create a shortcut of Half-Life, go to property and add "-game counter-life -gl" to Target property
