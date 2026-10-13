@@ -1,0 +1,268 @@
+﻿.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* Assuming 80px header */
+  background-color: #0A1929; /* Dark background behind ATM */
+  padding: 40px 20px;
+}
+
+.atmMachine {
+  background: linear-gradient(145deg, #1E293B, #0F172A);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid #334155;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.atmHeader {
+  color: #94A3B8;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.atmHeader::before, .atmHeader::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #334155;
+}
+
+.atmScreen {
+  background-color: #002244;
+  border: 4px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  padding: 24px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scanlines effect for screen */
+.atmScreen::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+}
+
+.screenTitle {
+  color: #38BDF8;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+  margin-bottom: 20px;
+}
+
+.screenContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 3;
+}
+
+.accountSelect {
+  background: transparent;
+  color: #E2E8F0;
+  border: 1px solid #38BDF8;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  width: 80%;
+  outline: none;
+}
+
+.accountSelect option {
+  background: #002244;
+  color: #E2E8F0;
+}
+
+.amountDisplay {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 48px;
+  color: #38BDF8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.amountDisplay span {
+  opacity: 0.8;
+}
+
+.errorText {
+  color: #EF4444;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  margin-top: 10px;
+  text-shadow: none;
+}
+
+.screenFooter {
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.screenBtn {
+  color: #E2E8F0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.screenBtn.left::before { content: '\25C0'; color: #38BDF8; }
+.screenBtn.right::after { content: '\25B6'; color: #38BDF8; }
+
+.hardwarePanel {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.keypad {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  background: #1E293B;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #334155;
+}
+
+.keyBtn {
+  background: linear-gradient(180deg, #E2E8F0 0%, #94A3B8 100%);
+  border: 1px solid #64748B;
+  border-radius: 6px;
+  color: #0F172A;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #64748B, 0 5px 10px rgba(0,0,0,0.3);
+  transition: all 0.1s;
+}
+
+.keyBtn:active {
+  box-shadow: 0 0 0 #64748B, 0 0 0 rgba(0,0,0,0);
+  transform: translateY(4px);
+}
+
+.keyBtn:nth-child(10) { grid-column: 2; } /* 0 key */
+.keyBtn:nth-child(11) { grid-column: 3; font-size: 16px; color: #DC2626; } /* Clear key */
+
+.actionPad {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 180px;
+}
+
+.actionBtn {
+  flex: 1;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.3);
+  transition: all 0.1s;
+  border: none;
+}
+
+.actionBtn:active {
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transform: translateY(4px);
+}
+
+.btnCancel {
+  background: linear-gradient(180deg, #EF4444 0%, #B91C1C 100%);
+  color: white;
+  box-shadow: 0 4px 0 #991B1B, 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.btnConfirm {
+  background: linear-gradient(180deg, #22C55E 0%, #15803D 100%);
+  color: white;
+  box-shadow: 0 4px 0 #166534, 0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* Success State overlay */
+.successOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #002244;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.successText {
+  color: #4ADE80;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+.receiptBtn {
+  background: transparent;
+  color: #38BDF8;
+  border: 1px solid #38BDF8;
+  padding: 10px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.receiptBtn:hover {
+  background: rgba(56, 189, 248, 0.1);
+}

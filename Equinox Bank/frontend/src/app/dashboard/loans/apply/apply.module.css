@@ -1,0 +1,413 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  color: #191B22;
+  margin: 0 0 48px 0;
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionCard {
+  background: #FFFFFF;
+  border: 1px solid #C3C6D5;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #191B22;
+  margin: 0;
+}
+
+.sectionSub {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #434653;
+  margin: 0;
+}
+
+.loanTypesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.typeCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: #FAF8FF;
+  border: 2px solid #C3C6D5;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  gap: 16px;
+}
+
+.typeCard:hover {
+  background: #F3F3FC;
+}
+
+.typeCardActive {
+  background: rgba(218, 226, 255, 0.2);
+  border-color: #00327D;
+}
+
+.typeIconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #E2E2EB;
+  color: #434653;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typeIconBoxActive {
+  background: #DAE2FF;
+  color: #00327D;
+}
+
+.typeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.typeTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #191B22;
+}
+
+.typeDesc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #434653;
+}
+
+.activeRing {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 12px;
+  border: 2px solid #00327D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00327D;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #434653;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currencySymbol {
+  position: absolute;
+  left: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #434653;
+}
+
+.textInput {
+  width: 100%;
+  padding: 12px 16px 12px 32px;
+  background: #FAF8FF;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #191B22;
+  outline: none;
+}
+
+.textInput:focus {
+  border-color: #00327D;
+}
+
+.selectInput {
+  width: 100%;
+  padding: 12px 16px;
+  background: #FAF8FF;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #191B22;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23434653' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+}
+
+.selectInput:focus {
+  border-color: #00327D;
+}
+
+.textArea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #FAF8FF;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #191B22;
+  outline: none;
+  min-height: 90px;
+  resize: vertical;
+}
+
+.textArea:focus {
+  border-color: #00327D;
+}
+
+/* Right Sticky Preview */
+.stickyCol {
+  position: sticky;
+  top: 32px;
+  background: rgba(177, 197, 255, 0.15);
+  border: 1px solid #DAE2FF;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.previewDeco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 128px;
+  height: 128px;
+  background: #DAE2FF;
+  opacity: 0.3;
+  border-bottom-left-radius: 12px;
+  z-index: 0;
+}
+
+.previewContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.previewHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.previewTitleWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.previewTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #191B22;
+  margin: 0;
+}
+
+.previewSub {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #434653;
+  margin: 0;
+}
+
+.previewRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(195, 198, 213, 0.4);
+}
+
+.previewRowLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #434653;
+}
+
+.previewRowValHigh {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #00327D;
+}
+
+.previewRowValMain {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #191B22;
+}
+
+.previewRowValSub {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #191B22;
+}
+
+.infoAlert {
+  background: #F3F3FC;
+  border: 1px solid rgba(195, 198, 213, 0.5);
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #434653;
+}
+
+.alertIcon {
+  color: #737784;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.primaryBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background: #00327D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.secondaryBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background: transparent;
+  color: #191B22;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .layoutGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stickyCol {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .loanTypesGrid {
+    grid-template-columns: 1fr;
+  }
+}

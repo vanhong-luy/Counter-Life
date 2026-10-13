@@ -1,0 +1,3 @@
+ALTER TABLE "kyc_documents" ADD COLUMN IF NOT EXISTS "status" VARCHAR(20) NOT NULL DEFAULT 'pending';
+ALTER TABLE "kyc_documents" ADD COLUMN IF NOT EXISTS "remarks" TEXT;
+DROP TABLE IF EXISTS "kyc_reviews" CASCADE;

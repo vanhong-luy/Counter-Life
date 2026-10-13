@@ -1,0 +1,334 @@
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  background-color: #0A1929;
+  padding: 40px 20px;
+}
+
+.posMachine {
+  background: linear-gradient(145deg, #1E293B, #0F172A);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid #334155;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.posHeader {
+  color: #94A3B8;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.posHeader::before, .posHeader::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #334155;
+}
+
+.posScreen {
+  background-color: #002244;
+  border: 4px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  min-height: 340px;
+  padding: 24px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.posScreen::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+}
+
+.screenTitle {
+  color: #38BDF8;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+  margin-bottom: 16px;
+}
+
+.screenContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  z-index: 3;
+}
+
+.cardSelect, .merchantInput {
+  background: transparent;
+  color: #E2E8F0;
+  border: 1px solid #38BDF8;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  width: 80%;
+  outline: none;
+}
+
+.cardSelect option {
+  background: #002244;
+  color: #E2E8F0;
+}
+
+.merchantInput::placeholder {
+  color: #5B7A94;
+}
+
+.amountDisplay {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  color: #38BDF8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.amountDisplay span {
+  opacity: 0.8;
+}
+
+.togglesRow {
+  display: flex;
+  gap: 24px;
+  z-index: 3;
+}
+
+.toggleItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #CBD5E1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.miniSwitch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.miniSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.miniSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #334155;
+  border: 1px solid #475569;
+  transition: .2s;
+  border-radius: 20px;
+}
+
+.miniSlider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #E2E8F0;
+  transition: .2s;
+  border-radius: 50%;
+}
+
+.miniSwitch input:checked + .miniSlider {
+  background-color: #38BDF8;
+  border-color: #38BDF8;
+}
+
+.miniSwitch input:checked + .miniSlider:before {
+  transform: translateX(18px);
+  background-color: #002244;
+}
+
+.errorBanner {
+  color: #FCA5A5;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  text-align: center;
+  z-index: 3;
+  padding: 0 8px;
+}
+
+.hardwarePanel {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.keypad {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  background: #1E293B;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #334155;
+}
+
+.keyBtn {
+  background: linear-gradient(180deg, #E2E8F0 0%, #94A3B8 100%);
+  border: 1px solid #64748B;
+  border-radius: 6px;
+  color: #0F172A;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #64748B, 0 5px 10px rgba(0,0,0,0.3);
+  transition: all 0.1s;
+}
+
+.keyBtn:active {
+  box-shadow: 0 0 0 #64748B, 0 0 0 rgba(0,0,0,0);
+  transform: translateY(4px);
+}
+
+.keyBtn:nth-child(10) { grid-column: 2; }
+.keyBtn:nth-child(11) { grid-column: 3; font-size: 16px; color: #DC2626; }
+
+.actionPad {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 180px;
+}
+
+.actionBtn {
+  flex: 1;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.3);
+  transition: all 0.1s;
+  border: none;
+}
+
+.actionBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.actionBtn:active {
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transform: translateY(4px);
+}
+
+.btnCancel {
+  background: linear-gradient(180deg, #EF4444 0%, #B91C1C 100%);
+  color: white;
+  box-shadow: 0 4px 0 #991B1B, 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.btnConfirm {
+  background: linear-gradient(180deg, #22C55E 0%, #15803D 100%);
+  color: white;
+  box-shadow: 0 4px 0 #166534, 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.resultOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #002244;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  text-align: center;
+}
+
+.resultTextSuccess {
+  color: #4ADE80;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+.resultTextFail {
+  color: #F87171;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  text-shadow: 0 0 10px rgba(248, 113, 113, 0.5);
+}
+
+.resultSub {
+  color: #94A3B8;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+}
+
+.receiptBtn {
+  background: transparent;
+  color: #38BDF8;
+  border: 1px solid #38BDF8;
+  padding: 10px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  margin-top: 12px;
+}
+.receiptBtn:hover {
+  background: rgba(56, 189, 248, 0.1);
+}

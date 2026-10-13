@@ -1,0 +1,417 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.96px;
+  color: #191B22;
+  margin: 0;
+}
+
+.subText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #434653;
+  margin: 0;
+}
+
+.transferBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 24px;
+  background: #00327D;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.transferBtn:hover {
+  background: #002255;
+}
+
+.filterCard {
+  background: #FAF8FF;
+  border: 1px solid #C3C6D5;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.filterLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #434653;
+}
+
+.filterSelect {
+  padding: 10px 16px;
+  background: #FAF8FF;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #191B22;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23434653' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+}
+
+.filterSelect:focus {
+  border-color: #00327D;
+}
+
+.tableCard {
+  background: #FAF8FF;
+  border: 1px solid #C3C6D5;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: flex;
+  flex-direction: row;
+  background: #F3F3FC;
+  border-bottom: 1px solid #C3C6D5;
+}
+
+.tableHeaderCell {
+  padding: 16px 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #434653;
+  flex: 1;
+}
+
+.tableHeaderCellDesc {
+  padding: 16px 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #434653;
+  flex: 2;
+}
+
+.tableHeaderCellRight {
+  padding: 16px 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #434653;
+  text-align: right;
+  flex: 1;
+}
+
+.tableHeaderCellBalance {
+  padding: 16px 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #434653;
+  text-align: right;
+  flex: 1;
+}
+
+.tableRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #C3C6D5;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.cell {
+  padding: 16px 24px;
+  flex: 1;
+}
+
+.cellDesc {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+.cellRight {
+  flex: 1;
+  text-align: right;
+  padding: 16px 24px;
+}
+
+.iconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBoxRed { background: #FFDAD6; color: #93000A; }
+.iconBoxGreen { background: #E6F4EA; color: #137333; }
+.iconBoxBlue { background: #B6D0FF; color: #3F5881; }
+
+.descText {
+  display: flex;
+  flex-direction: column;
+}
+
+.merchantName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #191B22;
+}
+
+.merchantCategory {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #434653;
+}
+
+.dateText {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #191B22;
+  margin-bottom: 4px;
+}
+
+.timeText {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #434653;
+}
+
+.refNumber {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #737784;
+}
+
+.badge {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 4px;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.badgeCleared { background: #E7E7F0; border: 1px solid #C3C6D5; color: #434653; }
+.badgeProcessing { background: #E6F4EA; border: 1px solid #CEEAD6; color: #137333; }
+.badgePending { background: #FEF7E0; border: 1px solid #FDECC8; color: #B06000; }
+
+.amountNeg {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #BA1A1A;
+}
+
+.amountPos {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #137333;
+}
+
+.cellBalance {
+  flex: 1;
+  text-align: right;
+  padding: 16px 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #434653;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-top: 1px solid #C3C6D5;
+}
+
+.paginationText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #434653;
+}
+
+.pageControls {
+  display: flex;
+  gap: 4px;
+}
+
+.pageBtn {
+  width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #434653;
+  cursor: pointer;
+}
+
+.pageBtnActive {
+  background: #00327D;
+  color: #FFFFFF;
+  border-color: #00327D;
+}
+
+.pageDots {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 4px 8px;
+  color: #434653;
+}
+
+.loadingRow {
+  padding: 24px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #737784;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 24px 16px;
+  }
+  
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .filterCard {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .tableHeader {
+    display: none; /* hide headers on mobile for a card-based layout */
+  }
+  
+  .tableRow {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+  }
+  
+  .cellDesc, .cell, .cellRight {
+    padding: 0;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .cellRight {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  
+  .descText {
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .tableRowLink {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .dateText, .timeText, .refNumber {
+    display: inline-block;
+    margin-right: 8px;
+  }
+}

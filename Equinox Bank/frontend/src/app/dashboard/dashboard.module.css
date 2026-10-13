@@ -1,0 +1,426 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -1.2px;
+  color: #191B22;
+  margin: 0;
+}
+
+.subText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #434653;
+  margin: 0;
+}
+
+.mainLayout {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  position: relative;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Total Balance Summary Card */
+.balanceCard {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: #0047AB;
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.balanceTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.balanceInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.defaultAccountLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.balanceAmount {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -0.96px;
+  color: #FFFFFF;
+}
+
+.walletIcon {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.balanceBottom {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 24px;
+}
+
+.statGroupDivider {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.statValue {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+/* Quick Actions */
+.quickActionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quickActionsHeading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #191B22;
+}
+
+.actionGrid {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.actionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 136px;
+  height: 98px;
+  background: #F3F3FC;
+  border: 1px solid #C3C6D5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionCard:hover {
+  background: #EAEAF4;
+  border-color: #A5BDFF;
+}
+
+.actionIcon {
+  color: #00327D;
+  margin-bottom: 8px;
+}
+
+.actionText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #191B22;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* My Accounts Section */
+.sectionCard {
+  background: #FFFFFF;
+  border: 1px solid #C3C6D5;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #191B22;
+  margin: 0;
+}
+
+.sectionLink {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #00327D;
+  text-decoration: none;
+}
+
+.sectionLink:hover {
+  text-decoration: underline;
+}
+
+.accountsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accountRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #F3F3FC;
+}
+
+.accountRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.accountIconBox {
+  width: 36px;
+  height: 36px;
+  background: #E7EFF9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00327D;
+  flex-shrink: 0;
+}
+
+.accountInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.accountName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #191B22;
+}
+
+.accountType {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #737784;
+}
+
+.accountBalance {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #191B22;
+}
+
+/* Recent Activity Feed */
+.asideContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 20px;
+  width: 360px;
+  min-width: 320px;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  border: 1px solid #C3C6D5;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.asideHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.asideHeading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #191B22;
+}
+
+.asideLink {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #00327D;
+  text-decoration: none;
+}
+
+.asideLink:hover {
+  text-decoration: underline;
+}
+
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activityItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+
+.activityIconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: #E7E7F0;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.activityIcon {
+  color: #00327D;
+}
+
+.activityDetails {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.activityTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #191B22;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activityTime {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #737784;
+  white-space: nowrap;
+}
+
+.activityAmountNegative {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #BA1A1A;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.activityAmountPositive {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #137333;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 24px 16px;
+  }
+  
+  .mainLayout {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .leftColumn {
+    width: 100%;
+  }
+  
+  .asideContainer {
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .actionGrid {
+    flex-wrap: wrap;
+  }
+}

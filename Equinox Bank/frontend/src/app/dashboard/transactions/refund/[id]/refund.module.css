@@ -1,0 +1,382 @@
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.card {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  width: 500px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #191B22;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #737784;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: #EAF0FF;
+  border-radius: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #00327D;
+}
+
+.amountCard {
+  background: #FAF8FF;
+  border: 1px solid #E7E7F0;
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.amountLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #434653;
+  margin-bottom: 8px;
+}
+
+.amountValue {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #00327D;
+  margin: 0;
+  letter-spacing: -0.8px;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  position: relative;
+  padding: 0 16px;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  right: 32px;
+  height: 2px;
+  background: #E7E7F0;
+  z-index: 0;
+}
+
+.timelineLineActive {
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  width: 50%;
+  height: 2px;
+  background: #00327D;
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.stepIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepIconDone {
+  background: #00327D;
+  color: #FFFFFF;
+}
+
+.stepIconCurrent {
+  background: #00327D;
+  color: #FFFFFF;
+  box-shadow: 0 0 0 4px #EAF0FF;
+}
+
+.stepIconFuture {
+  background: #F3F3FC;
+  color: #737784;
+}
+
+.stepLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #191B22;
+}
+
+.stepLabelCurrent {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #00327D;
+}
+
+.stepLabelFuture {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #737784;
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E7E7F0;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #E7E7F0;
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #434653;
+}
+
+.detailValue {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #191B22;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detailValueTimeline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #434653;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 16px;
+}
+
+.btnGroup > button {
+  flex: 1;
+}
+
+.primaryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #00327D;
+  border-radius: 4px;
+  color: #00327D;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primaryBtn:hover {
+  background: #F3F3FC;
+}
+
+.secondaryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  color: #434653;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.secondaryBtn:hover {
+  background: #F8F9FA;
+}
+
+.stepperContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 32px 0 24px;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.stepCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.stepCompleted {
+  background: #1D4ED8;
+  color: #FFFFFF;
+}
+
+.stepActive {
+  background: #2563EB;
+  color: #FFFFFF;
+  box-shadow: 0 0 0 4px #DBEAFE;
+}
+
+.innerDot {
+  width: 8px;
+  height: 8px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.stepInactive {
+  background: #F1F5F9;
+  color: #94A3B8;
+  border: 1px solid #CBD5E1;
+}
+
+.stepLabelActive {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #1E293B;
+}
+
+.stepLabelInactive {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: #E2E8F0;
+  margin: 0 8px;
+  margin-top: -20px;
+}
+
+.stepLineActive {
+  background: #2563EB;
+}
+
+.stepLineHalf {
+  background: linear-gradient(90deg, #2563EB 50%, #E2E8F0 50%);
+}
+
+.detailsBox {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 24px 16px;
+  }
+  
+  .card {
+    width: 100%;
+    padding: 24px 16px;
+  }
+  
+  .headerRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .detailRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .btnGroup {
+    flex-direction: column;
+  }
+}
+

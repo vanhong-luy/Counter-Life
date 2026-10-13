@@ -1,0 +1,1 @@
+ALTER TABLE cards ALTER COLUMN card_number TYPE VARCHAR(20);

@@ -1,0 +1,214 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #191B22;
+  margin: 0;
+  letter-spacing: -0.32px;
+}
+
+.subText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #434653;
+  margin: 0;
+}
+
+.primaryBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 8px;
+  background: #00327D;
+  border-radius: 4px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primaryBtn:hover {
+  background: #002255;
+}
+
+.cardsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.cardVisual {
+  width: 400px;
+  height: 250px;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.cardVisual:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.2);
+}
+
+.cardBlue {
+  background: linear-gradient(135deg, #0044AA 0%, #002255 100%);
+}
+
+.cardDark {
+  background: linear-gradient(135deg, #333333 0%, #111111 100%);
+}
+
+.cardVisual::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.cardTypeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardTypeLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.cardTypeName {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contactlessIcon {
+  opacity: 0.6;
+}
+
+.cardNumber {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  z-index: 1;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+}
+
+.cardDots {
+  font-size: 18px;
+  letter-spacing: 6px;
+  opacity: 0.8;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.cardHolderInfo, .cardExpiresInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardLabel {
+  font-size: 9px;
+  font-weight: 600;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.cardValue {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.networkLogo {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 24px 16px;
+  }
+  
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .primaryBtn {
+    width: 100%;
+  }
+  
+  .cardVisual {
+    width: 100%;
+    height: 220px;
+  }
+}

@@ -1,0 +1,106 @@
+.wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px 40px;
+  min-height: 100vh;
+  background: radial-gradient(ellipse 900px 500px at 50% 15%, rgba(212,169,74,0.05), transparent), var(--bg, #0d0f13);
+}
+
+.brand { text-align: center; margin-bottom: 36px; }
+.brand h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.15;
+  margin: 0;
+  background: linear-gradient(180deg, #eccf8a, #c99e46);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle {
+  margin-top: 14px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: #9aa1ac;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: #1a1d24;
+  border: 1px solid #2b303a;
+  border-radius: 14px;
+  padding: 32px;
+}
+.card h2 { margin: 0 0 24px; font-size: 18px; color: #e9ebef; }
+
+.errorBox {
+  background: rgba(230,88,79,0.1);
+  border: 1px solid rgba(230,88,79,0.3);
+  color: #f18981;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  margin-bottom: 18px;
+}
+
+.fieldGroup { margin-bottom: 18px; }
+.fieldLabelRow { margin-bottom: 8px; }
+.fieldLabel { font-size: 10.5px; letter-spacing: 0.1em; color: #656c78; }
+.inputBox {
+  display: flex; align-items: center; gap: 10px;
+  background: #101216;
+  border: 1px solid #2b303a;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #9aa1ac;
+}
+.inputBox:focus-within { border-color: #d4a94a; }
+.inputBox input {
+  background: none; border: none; outline: none;
+  color: #e9ebef; font-size: 14px; width: 100%;
+}
+.inputBox input::placeholder { color: #656c78; }
+
+.loginBtn {
+  width: 100%;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: linear-gradient(180deg, #eccf8a, #c99e46);
+  color: #14171d;
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  margin-top: 6px;
+}
+.loginBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.footerStatus {
+  display: flex; align-items: center; gap: 7px;
+  justify-content: center;
+  margin-top: 22px;
+  font-size: 11px;
+  color: #656c78;
+  letter-spacing: 0.04em;
+}
+.statusDot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #2fbf88;
+}
+
+.pageFooter {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #656c78;
+}
+.secureNote { display: flex; align-items: center; gap: 6px; }

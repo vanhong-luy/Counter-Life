@@ -1,0 +1,2 @@
+ALTER TABLE loan_repayments ADD COLUMN IF NOT EXISTS interest_paid NUMERIC(19,4) DEFAULT 0;
+ALTER TABLE loan_repayments ADD COLUMN IF NOT EXISTS principal_paid NUMERIC(19,4) DEFAULT 0;

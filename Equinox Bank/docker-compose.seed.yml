@@ -1,0 +1,38 @@
+# Seed-phase override for docker-compose.yml
+# Boosts postgres resources and tunes PG for bulk insert performance.
+# Use: docker compose -f docker-compose.yml -f docker-compose.seed.yml up -d
+# Then: ./seed.ps1
+# Then: docker compose down && docker compose up -d  (back to normal)
+
+services:
+  postgres:
+    cpus: '2.0'
+    mem_limit: 2G
+    command: >
+      postgres
+      -c shared_buffers=512MB
+      -c work_mem=64MB
+      -c maintenance_work_mem=512MB
+      -c effective_cache_size=2GB
+      -c max_wal_size=2GB
+      -c checkpoint_completion_target=0.9
+
+  admin-api:
+    cpus: '0.25'
+    mem_limit: 512M
+
+  user-api:
+    cpus: '0.5'
+    mem_limit: 768M
+
+  frontend:
+    cpus: '0.25'
+    mem_limit: 256M
+
+  mongodb:
+    cpus: '0.5'
+    mem_limit: 1G
+
+  redis:
+    cpus: '0.25'
+    mem_limit: 96M

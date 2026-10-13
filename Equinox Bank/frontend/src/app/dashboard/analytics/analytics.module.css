@@ -1,0 +1,468 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 64px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #191B22;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.subText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #434653;
+  margin: 0;
+}
+
+.monthSelect {
+  padding: 8px 16px;
+  background: #F3F3FC;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #191B22;
+  outline: none;
+  cursor: pointer;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 0;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #C3C6D5;
+  border-radius: 12px;
+  padding: 28px 32px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px;
+  background: #FFFFFF;
+  border: 1px solid #C3C6D5;
+  border-radius: 12px;
+  color: #737784;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.cardTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #191B22;
+  margin: 0;
+}
+
+.totalAmount {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #00327D;
+}
+
+/* ── Bar Chart ─────────────────────────── */
+.chartArea {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.yAxis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+  padding-bottom: 4px;
+}
+
+.yTick {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.yTickLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: #737784;
+  width: 44px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.yGridLine {
+  position: absolute;
+  left: 56px;
+  right: 0;
+  height: 1px;
+  background: #E2E2EB;
+  pointer-events: none;
+}
+
+.barGroup {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex: 1;
+  padding-left: 8px;
+}
+
+.barWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+}
+
+.barTrack {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  transition: background-color 0.2s ease, height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s ease;
+  min-height: 4px;
+}
+
+.barLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  color: #434653;
+  text-align: center;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #191B22;
+  color: #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #191B22;
+}
+
+.tooltipLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.tooltipValue {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #A5BDFF;
+}
+
+.tooltipPercent {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: #9CA3AF;
+}
+
+/* ── Donut Chart ──────────────────────── */
+.donutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.donutLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #434653;
+  flex: 1;
+}
+
+.legendPct {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #191B22;
+}
+
+/* ── Category List ────────────────────── */
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.categoryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.categoryLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 110px;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.categoryInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #191B22;
+}
+
+.categoryPercentage {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #737784;
+}
+
+.categoryRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.progressTrack {
+  width: 80px;
+  height: 5px;
+  background: #E2E2EB;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.categoryPct {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #737784;
+  min-width: 28px;
+  text-align: right;
+}
+
+.categoryAmount {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #191B22;
+  min-width: 68px;
+  text-align: right;
+}
+
+/* Add Goal Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 32px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modalTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #191B22;
+  margin: 0 0 24px 0;
+}
+
+.modalFormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.modalLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #191B22;
+}
+
+.modalInput, .modalSelect {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.cancelBtn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #C3C6D5;
+  border-radius: 4px;
+  color: #434653;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.saveBtn {
+  padding: 8px 16px;
+  background: #00327D;
+  border: none;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ── Responsive ───────────────────────── */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 24px;
+  }
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .categoryRight {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .progressTrack {
+    width: 100px;
+  }
+}
